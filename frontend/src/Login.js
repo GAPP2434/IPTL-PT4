@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import './Login.css'; 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Handle login logic here
+    // For now, just navigate to dashboard without authentication
     console.log('Username:', username);
     console.log('Password:', password);
+    navigate('/dashboard');
   };
 
   return (
