@@ -6,7 +6,7 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const cookieParser = require("cookie-parser");
 const authRoutes = require("./routes/auth");
-const postRoutes = require("./routes/posts");
+const postRoutes = require("./models/posts");
 
 dotenv.config();
 
